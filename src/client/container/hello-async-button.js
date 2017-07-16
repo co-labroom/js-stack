@@ -3,9 +3,9 @@
  */
 
 // @flow
-import {connect} from 'react-redux'
+import { connect } from 'react-redux'
 
-import {sayHelloAsync} from '../action/hello'
+import { sayHelloAsync } from '../action/hello'
 import Button from '../component/button'
 
 const mapStateToProps = () => ({
@@ -15,9 +15,8 @@ const mapStateToProps = () => ({
 const mapDispatchToProps = dispatch => ({
   handleClick: () => {
     dispatch(sayHelloAsync(1234))
-  }
+  },
 })
 
 export default connect(mapStateToProps, mapDispatchToProps)(Button)
-
 
